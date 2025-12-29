@@ -116,12 +116,86 @@
             margin-bottom: 0.5rem;
         }
 
+        .info-box {
+            background: #e0e7ff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f4ff;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .quick-link-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .quick-link-card h3 {
+            margin-top: 0;
+        }
+
+        .quick-link-card a {
+            text-decoration: none;
+        }
+
         footer {
             background: #2d3748;
             color: white;
             text-align: center;
             padding: 2rem 0;
             margin-top: 3rem;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         .highlight {
@@ -144,6 +218,10 @@
             section {
                 padding: 1.5rem;
             }
+
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -155,32 +233,73 @@
 
     <nav>
         <ul>
-            <li><a href="#support">Support</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Use</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+            <li><a href="terms_of_use.html">Terms of Use</a></li>
         </ul>
     </nav>
 
     <div class="container">
+        <section>
+            <h2>Welcome to Novo Recovery</h2>
+            <p>Novo Recovery is your private, secure companion on your wellness journey. All your data stays on your device, ensuring complete privacy and control over your personal information.</p>
+            
+            <div class="info-box">
+                <p><strong>Privacy First:</strong> Your recovery data never leaves your device. We believe your personal health information should remain exactly that - personal.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="support.html" class="btn">Get Support</a>
+                <a href="privacy_policy.html" class="btn btn-secondary">View Privacy Policy</a>
+            </div>
+        </section>
+
+        <div class="quick-links">
+            <a href="support.html">
+                <div class="quick-link-card">
+                    <h3>📧 Support</h3>
+                    <p>Get help with the app, report issues, or ask questions about features.</p>
+                </div>
+            </a>
+
+            <a href="privacy_policy.html">
+                <div class="quick-link-card">
+                    <h3>🔒 Privacy Policy</h3>
+                    <p>Learn how we protect your privacy and what data we collect (spoiler: very little!).</p>
+                </div>
+            </a>
+
+            <a href="terms_of_use.html">
+                <div class="quick-link-card">
+                    <h3>📄 Terms of Use</h3>
+                    <p>Read our terms and conditions for using Novo Recovery.</p>
+                </div>
+            </a>
+        </div>
+
         <section id="support">
             <h2>Support</h2>
             <p>Welcome to Novo Recovery Support. We're here to help you get the most out of your recovery journey.</p>
 
             <h3>Frequently Asked Questions</h3>
             <p><strong>How do I get started with Novo Recovery?</strong></p>
-            <p>Download the app from the App Store, create an account, and follow the onboarding process to set up your recovery plan.</p>
+            <p>Download the app from the App Store, launch it, and follow the onboarding process to set up your recovery plan.</p>
 
             <p><strong>Is my data secure?</strong></p>
-            <p>Yes, we take your privacy seriously. All data is encrypted and stored securely. Please see our Privacy Policy for more details.</p>
+            <p>Yes, we take your privacy seriously. All data is stored locally on your device and never leaves it. Please see our <a href="privacy_policy.html" style="color: #667eea;">Privacy Policy</a> for more details.</p>
 
             <p><strong>Can I sync across multiple devices?</strong></p>
-            <p>Yes, your recovery data syncs automatically across all your devices when you're signed in with the same account.</p>
+            <p>Currently, Novo Recovery stores all data locally on your device to ensure maximum privacy. Your data doesn't automatically sync across devices.</p>
 
             <h3>Contact Us</h3>
             <div class="contact-info">
-                <p><strong>Email:</strong> support@Novorecovery.com</p>
+                <p><strong>Email:</strong> <a href="mailto:kumkwat_splata.9n@icloud.com" style="color: #667eea;">kumkwat_splata.9n@icloud.com</a></p>
                 <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
                 <p>For urgent issues, please mark your email as "Urgent" in the subject line.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="support.html" class="btn">View Full Support Page</a>
             </div>
         </section>
 
@@ -188,45 +307,26 @@
             <h2>Privacy Policy</h2>
             <p><em>Last updated: December 29, 2025</em></p>
 
-            <h3>Information We Collect</h3>
-            <p>Novo Recovery collects the following types of information:</p>
+            <div class="info-box">
+                <p><strong>Your Privacy is Our Priority</strong></p>
+                <p>Novo Recovery is designed with privacy at its core. All your personal data stays on your device, and we have no access to it.</p>
+            </div>
+
+            <h3>What We Don't Collect</h3>
             <ul>
-                <li><strong>Account Information:</strong> Email address, name, and password</li>
-                <li><strong>Health Data:</strong> Recovery metrics, activity logs, and wellness information you choose to track</li>
-                <li><strong>Usage Data:</strong> App interactions, device information, and analytics</li>
+                <li><strong>No Personal Information:</strong> We do not collect your name, email, or any identifying information</li>
+                <li><strong>No Health Data:</strong> Your recovery metrics and wellness information remain exclusively on your device</li>
+                <li><strong>No Location Data:</strong> We do not collect or track your location</li>
             </ul>
 
-            <h3>How We Use Your Information</h3>
-            <p>We use your information to:</p>
-            <ul>
-                <li>Provide and improve the Novo Recovery service</li>
-                <li>Personalize your recovery experience</li>
-                <li>Send important updates and notifications</li>
-                <li>Analyze app performance and user trends</li>
-            </ul>
+            <h3>What We Do Collect</h3>
+            <p>We collect anonymous, aggregated analytics through Apple's App Store Connect to improve app performance. This data cannot identify individual users.</p>
 
-            <h3>Data Storage and Security</h3>
-            <p>Your data is stored securely using industry-standard encryption. We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+            <p><strong>You can opt out of analytics:</strong> Go to Settings > Privacy & Security > Analytics & Improvements > Disable "Share iPhone Analytics"</p>
 
-            <h3>Data Sharing</h3>
-            <p>We do not sell your personal information. We may share data with:</p>
-            <ul>
-                <li>Service providers who assist in operating our app (under strict confidentiality agreements)</li>
-                <li>Legal authorities when required by law</li>
-            </ul>
-
-            <h3>Your Rights</h3>
-            <p>You have the right to:</p>
-            <ul>
-                <li>Access your personal data</li>
-                <li>Request correction of inaccurate data</li>
-                <li>Request deletion of your data</li>
-                <li>Export your data</li>
-                <li>Opt out of marketing communications</li>
-            </ul>
-
-            <h3>Contact for Privacy Concerns</h3>
-            <p>If you have questions about this Privacy Policy, please contact us at privacy@Novorecovery.com</p>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="privacy_policy.html" class="btn">Read Full Privacy Policy</a>
+            </div>
         </section>
 
         <section id="terms">
@@ -237,42 +337,31 @@
             <p>By accessing and using Novo Recovery, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the app.</p>
 
             <h3>Use of Service</h3>
-            <p>Novo Recovery is intended for personal wellness and recovery tracking. You agree to:</p>
-            <ul>
-                <li>Provide accurate information when creating your account</li>
-                <li>Maintain the security of your account credentials</li>
-                <li>Use the service only for lawful purposes</li>
-                <li>Not attempt to reverse engineer or compromise the app's security</li>
-            </ul>
+            <p>Novo Recovery is intended for personal wellness and recovery tracking. You agree to use the service only for lawful purposes.</p>
 
             <h3>Medical Disclaimer</h3>
             <p class="highlight">Novo Recovery is not a medical device and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers regarding any medical conditions or concerns.</p>
 
-            <h3>Intellectual Property</h3>
-            <p>All content, features, and functionality of Novo Recovery are owned by us and are protected by international copyright, trademark, and other intellectual property laws.</p>
-
-            <h3>User Content</h3>
-            <p>You retain ownership of any data you input into Novo Recovery. By using the service, you grant us a license to use this data to provide and improve the service as described in our Privacy Policy.</p>
-
             <h3>Limitation of Liability</h3>
-            <p>Novo Recovery is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of the service, including but not limited to direct, indirect, incidental, or consequential damages.</p>
+            <p>Novo Recovery is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of the service.</p>
 
-            <h3>Termination</h3>
-            <p>We reserve the right to suspend or terminate your account if you violate these terms. You may terminate your account at any time by contacting support.</p>
+            <h3>Pricing</h3>
+            <p>Prices for in-app purchases, including the lifetime subscription, are subject to change at any time without prior notice.</p>
 
-            <h3>Changes to Terms</h3>
-            <p>We may modify these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms.</p>
-
-            <h3>Governing Law</h3>
-            <p>These terms are governed by the laws of the jurisdiction in which Novo Recovery operates, without regard to conflict of law principles.</p>
-
-            <h3>Contact</h3>
-            <p>For questions about these Terms of Use, contact us at legal@Novorecovery.com</p>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="terms_of_use.html" class="btn">Read Full Terms of Use</a>
+            </div>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2025 Novo Recovery. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="support.html">Support</a> |
+            <a href="privacy_policy.html">Privacy Policy</a> |
+            <a href="terms_of_use.html">Terms of Use</a>
+        </p>
     </footer>
 </body>
 </html>
